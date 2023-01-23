@@ -1,3 +1,4 @@
+const { create } = require("domain");
 const { Assessment } = require(`../database/models`);
 
 exports.submit = async (assessment) => {
@@ -9,6 +10,5 @@ exports.getList = () => {
   // use the sequelize model Assessments from packages/api/src/database/models to fetch
   // the assessment data from the PostgreSQL database
   const assessments = [];
-
   return assessments;
 };
